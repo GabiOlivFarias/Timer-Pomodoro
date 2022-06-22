@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(73, 72, 72);
+}
+h1{
+    text-align: center;
+    margin: auto;
+    padding: 10px
+}
+#home{
+    text-align: center;
+    margin: auto;
+    background-color: white;
+    width: 700px;
+    padding: 20px;
+    font-size: 2em;
+}
+input{
+    height: 30px;
+    font-size: 20pt;
+}
+input[type=number]::-webkit-inner-spin-button { /*tira setas no Google Chrome*/
+    -webkit-appearance: none; 
+}
+input[type=number] { /*tira setas no Mozila*/
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+#tnum, #tinter, #tsec{
+    border: 0;
+    box-shadow: 3px 3px 3px 3px grey;
+    border-radius: 5px;
+}

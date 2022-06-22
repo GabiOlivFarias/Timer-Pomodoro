@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./timer.css">
+    <link rel="shortcut icon" href="./imagens/Graphicloads-Food-Drink-Tomato.ico" type="image/x-icon">
+    <title>Timer Pomodoro</title>
+</head>
+<body>
+    <header>
+        <h1>Timer Pomodoro</h1>
+    </header>
+    <section>
+        <div id="home">
+            <p> Tempo <input type="number" name="tnumber" id="tnum" placeholder=" Padrão 25 minutos"></p>
+            <p> Pausa <input type="number" name="tinter" id="tinter" placeholder=" Padrão 5 minutos"></p>
+            <p> Sessões <input type="number" name="tsec" id="tsec" placeholder=" Padrão 4 sessões"></p>
+            <button id="iniciar" onclick="inicar()">Iniciar</button>
+        </div>
+        <div id="timer" style="display: none;">
+
+        </div>
+    </section>
+    <footer></footer>
+</body>
+</html>
