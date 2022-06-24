@@ -65,3 +65,29 @@ header{
  #tempo{
     display: inline;
  }
+ #fim{
+   text-align: center;
+   margin: auto;
+   color: white;
+   background-color: #BA2859;
+   min-height: 300px;
+   width: 700px;
+   border-radius: 10px;
+   box-shadow: 3px 3px 3px rgb(56, 56, 56);
+ }
+ #retornar{
+   text-decoration: none;
+   font-size: 20pt;
+   color: white;
+   margin-top: 30px;
+   border-radius: 10px;
+   box-shadow: 3px 3px 3px rgb(56, 56, 56);
+   width: 100px;
+ }
+ #qtd-pomodoro{
+   text-align: center;
+   margin: auto;
+   color: white;
+   font-size: 20pt;
+   padding: 10px;
+ }

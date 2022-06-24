@@ -1,9 +1,9 @@
 var acao = document.getElementById('acao')
 var pausa = document.getElementById('pausa')
 var sessoes = document.getElementById('sessoes')
-
+var fim = document.getElementById('fim')
+//var contPomodoro
 var segundos
-
 
 var Som_ambiente = new Audio("./audio/Lord of the Rings Sound of The Shire.mp3")
 var volta = new Audio("./audio/audio_volta.mp3")
@@ -39,7 +39,10 @@ function iniciar() {
       window.alert("Adicione as sessões")
       sessoes.focus()
    } else {
-
+      /*var contPomodoro = document.getElementById('qtd-pomodoro')
+      var contPomodoro = Number(contPomodoro.value)  
+      contPomodoro = 0
+      contPomodoro ++*/
       
       pause.style.setProperty('display', 'block', 'important')
 
@@ -50,12 +53,16 @@ function iniciar() {
        /* e sconder inputs e botão iniciar e mostrar div do timer*/
       document.getElementById('config').style.setProperty('display', 'none', 'important')
       document.getElementById('timer').style.setProperty('display', 'block', 'important')
-//fazer até aqui commit
       momentoAcao()
-
+      /*fim.style.fontSize = '20pt'
+      if(contPomodoro >= 1){//conta quantos pomodoros foram realizados e exibe no HTML
+         fim.innerHTML +=`<br> ${contPomodoro}  Pomodoro foi realizado`
+      }else{
+         fim.innerHTML +=`<br> ${contPomodoro}  Pomodoros foram realizados`
+      }*/
    }
-
 }
+
 function momentoAcao() {
 
    let sessoes_valor = localStorage.getItem('sessoes')//pega os valores convertidos em string
@@ -98,22 +105,21 @@ function momentoAcao() {
             clearInterval(min_interval)
             clearInterval(seg_interval)
 
-            ambiente.pause()//pausa a musica ambiente
+           pausar()//pausa a musica ambiente
 
             volta.play()// soa o alarme
-            
             momentoPausa()//chama a função pausa se zerar os minutos e segundos
 
+            setTimeout(function(){//espera 1 seg. apos a buzina e retoma o som ambiente
+               executar()
+            }, 1000)
          }
          segundos = 60 // recomeça os 60 segundos até os minutos chegarem á 0.
       }
-
+      
    }
 }
 function momentoPausa() {
-
-   ambiente.play()//volta musica ambiente
-   
    let titulo = document.getElementById('title')
    titulo.innerHTML = "PAUSA"
    titulo.style.fontSize = '25pt'
@@ -155,7 +161,7 @@ function momentoPausa() {
                //esconde o timer 
                document.getElementById('config').style.setProperty('display', 'none', 'important')
                document.getElementById('timer').style.setProperty('display', 'none', 'important')
-               document.getElementById('fim').style.setProperty('display', 'block', 'important')//msg final
+               fim.style.setProperty('display', 'block', 'important')
             } else {
                // Senão toca o audio volta
                volta.play();

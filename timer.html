@@ -14,7 +14,6 @@
 
 <body>
 
-   <!-- Menu -->
    <header>
       <h1 id="titulo">Timer Pomodoro </h1>
 
@@ -35,28 +34,24 @@
             <div id="config">
 
                <div id="opcoes">
-                  <!-- Inputs -->
-                        <div id="btn-Acao">
+                  
+                        <div id="btn-Acao"> <!-- Inputs -->
                            <label>Ação:</label>
-                           <input type="number" id="acao">
+                           <input type="number" id="acao" value="25">
                            <small id='erro_acao'></small>
                         </div>
                      
                         <div id="btn-pausa">
                            <label>Pausa:</label>
-                           <input type="number" id="pausa">
+                           <input type="number" id="pausa" value="5">
                            <small id='erro_pausa'></small>
                         </div>
 
                         <div id="btn-sessao">
                            <label>Sessões:</label>
-                           <input type="number" id="sessoes">
+                           <input type="number" id="sessoes" value="4">
                            <small id='erro_sessoes'></small>
                         </div>
-                  
-                  <!-- Inputs -->
-
-                  <!-- Botão iniciar -->
 
                      <div>
                         <button onclick="iniciar()" id="iniciar">Iniciar</button>
@@ -65,48 +60,32 @@
                </div>
 
             </div>
-      <!-- /config -->
-
-      <!-- Timer -->
 
       <div id="timer" style="display: inline;">
             <div >
                <h3 id='title'></h3>
             </div>
 
-         <!-- Relogio -->
-         <div id="ciclo">
+         <div id="ciclo"><!--relogio do timer-->
             <div id="tempo">
                <h2 id="minutes_ok"></h2>
                <h2>:</h2>
                <h2 id="seconds_ok"></h2>
             </div>
-         <!-- /Relogio -->
             <div>
                <h3 id='title_sessao'></h3>
             </div>
         </div>
 
       </div>
-      <!-- /Timer -->
 
-      <!-- Finalização -->
       <div id="fim" style="display: none;">
          <h1>Ciclo finalizado!</h1>
-         <div >
-            <div>
-               <a href="timer.html">Inicio</a>
-            </div>
-         </div>
+        <a href="timer.html" id="retornar">Inicio</a>
+         <h3 id="qtd-pomodoro"></h3>
       </div>
-      <!-- /Finalização -->
-
 
    </div>
-   <!-- /Container -->
-
-
-
    <script src="timer.js"></script>
 </body>
 
