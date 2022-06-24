@@ -28,7 +28,6 @@ function executar(){
 // Função para iniciar a contagem
 document.getElementById('timer').style.setProperty('display', 'none', 'important')
 function iniciar() {
-   ambiente.play()  // Tocar a música automáticamente
    if (acao.value == 0) {//campos de ação, pausa e sessões estão preenchidos
       window.alert("Adicione os minutos")
       acao.focus()
@@ -43,7 +42,7 @@ function iniciar() {
       var contPomodoro = Number(contPomodoro.value)  
       contPomodoro = 0
       contPomodoro ++*/
-      
+      ambiente.play()  // Tocar a música automáticamente
       pause.style.setProperty('display', 'block', 'important')
 
       localStorage.setItem('acao', String(acao.value))//convertendo p strings
