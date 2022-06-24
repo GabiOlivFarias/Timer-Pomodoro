@@ -1,28 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./timer.css">
-    <link rel="shortcut icon" href="./imagens/Graphicloads-Food-Drink-Tomato.ico" type="image/x-icon">
-    <title>Timer Pomodoro</title>
-</head>
-<body>
-    <header>
-        <h1>Timer Pomodoro</h1>
-    </header>
-    <section>
-        <div id="home">
-            <p> Tempo <input type="number" name="tnumber" id="tnum" placeholder=" Padrão 25 minutos"></p>
-            <p> Pausa <input type="number" name="tinter" id="tinter" placeholder=" Padrão 5 minutos"></p>
-            <p> Sessões <input type="number" name="tsec" id="tsec" placeholder=" Padrão 4 sessões"></p>
-            <button id="iniciar" onclick="inicar()">Iniciar</button>
-        </div>
-        <div id="timer" style="display: none;">
 
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="stylesheet" href="./timer.css">
+   <link rel="icon" href="./imagens/Graphicloads-Food-Drink-Tomato.ico" type="image/x-icon">
+
+   <title>Timer Pomodoro</title>
+</head>
+
+<body>
+  <h1>Timer Pomodoro </h1>
+      <div id="home">
+         <a onclick="pausar()">
+            <img src="./imagens/Actions-media-playback-pause-icon.png" alt="botão pause" id="pause" style="display: none;">
+         </a>
+
+         <a onclick="executar()">
+            <img src="./imagens/Play-icon.png" alt="botão play" id="play" style="display: none;">
+         </a>
+         <audio id="ambiente" src="./audio/Lord of the Rings Sound of The Shire.mp3" type="audio/mpeg"></audio>
+
+            <div id="config">
+
+               <div id="opcoes">
+                
+                        <div id="btn-Acao">
+                           <label>Ação:</label>
+                           <input type="number" id="tnum">
+                           <small id='erro_acao'></small>
+                        </div>
+                     
+                        <div id="btn-pausa">
+                           <label>Pausa:</label>
+                           <input type="number" id="tinter">
+                           <small id='erro_pausa'></small>
+                        </div>
+
+                        <div id="btn-sessao">
+                           <label>Sessões:</label>
+                           <input type="number" id="tsec">
+                           <small id='erro_sessoes'></small>
+                        </div>
+
+                     <div>
+                        <button id="iniciar">Iniciar</button>
+                     </div>
+               </div>
+            </div>
+</div>
+      <div id="timer">
+            <div >
+               <h3 id='title'></h3>
+            </div>
+         <div id="ciclo">
+            <div id="tempo">
+               <h2 id="minutes_ok">00</h2>
+               <h2>:</h2>
+               <h2 id="seconds_ok">00</h2>
+            </div>
+
+            <div>
+               <h3 id='title_sessao'></h3>
+            </div>
         </div>
-    </section>
-    <footer></footer>
+
+      </div>
 </body>
 </html>

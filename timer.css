@@ -4,18 +4,32 @@ body{
     background-color: rgb(73, 72, 72);
 }
 h1{
+    background-color:#BA2859;
+    font-size: 20pt;
+    height: 100px;
     text-align: center;
     margin: auto;
-    padding: 10px
 }
 #home{
-    text-align: center;
-    margin: auto;
     background-color: white;
+    min-height: 300px;
     width: 700px;
-    padding: 20px;
-    font-size: 2em;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgb(56, 56, 56);
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
 }
+#timer{
+    background-color: white;
+    min-height: 300px;
+    width: 700px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgb(56, 56, 56);
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+  }
 input{
     height: 30px;
     font-size: 20pt;
@@ -32,4 +46,5 @@ input[type=number] { /*tira setas no Mozila*/
     border: 0;
     box-shadow: 3px 3px 3px 3px grey;
     border-radius: 5px;
+    margin: 10px;
 }
