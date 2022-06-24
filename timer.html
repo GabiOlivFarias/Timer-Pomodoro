@@ -13,8 +13,12 @@
 </head>
 
 <body>
-  <h1>Timer Pomodoro </h1>
-      <div id="home">
+
+   <!-- Menu -->
+   <header>
+      <h1 id="titulo">Timer Pomodoro </h1>
+
+      <div>
          <a onclick="pausar()">
             <img src="./imagens/Actions-media-playback-pause-icon.png" alt="botão pause" id="pause" style="display: none;">
          </a>
@@ -22,52 +26,88 @@
          <a onclick="executar()">
             <img src="./imagens/Play-icon.png" alt="botão play" id="play" style="display: none;">
          </a>
-         <audio id="ambiente" src="./audio/Lord of the Rings Sound of The Shire.mp3" type="audio/mpeg"></audio>
 
+         <audio id="ambiente" src="./audio/Lord of the Rings Sound of The Shire.mp3" type="audio/mpeg"></audio>
+      </div>
+
+    </header>
+   <div class="container">
             <div id="config">
 
                <div id="opcoes">
-                
+                  <!-- Inputs -->
                         <div id="btn-Acao">
                            <label>Ação:</label>
-                           <input type="number" id="tnum">
+                           <input type="number" id="acao">
                            <small id='erro_acao'></small>
                         </div>
                      
                         <div id="btn-pausa">
                            <label>Pausa:</label>
-                           <input type="number" id="tinter">
+                           <input type="number" id="pausa">
                            <small id='erro_pausa'></small>
                         </div>
 
                         <div id="btn-sessao">
                            <label>Sessões:</label>
-                           <input type="number" id="tsec">
+                           <input type="number" id="sessoes">
                            <small id='erro_sessoes'></small>
                         </div>
+                  
+                  <!-- Inputs -->
+
+                  <!-- Botão iniciar -->
 
                      <div>
-                        <button id="iniciar">Iniciar</button>
+                        <button onclick="iniciar()" id="iniciar">Iniciar</button>
                      </div>
+
                </div>
+
             </div>
-</div>
-      <div id="timer">
+      <!-- /config -->
+
+      <!-- Timer -->
+
+      <div id="timer" style="display: inline;">
             <div >
                <h3 id='title'></h3>
             </div>
+
+         <!-- Relogio -->
          <div id="ciclo">
             <div id="tempo">
-               <h2 id="minutes_ok">00</h2>
+               <h2 id="minutes_ok"></h2>
                <h2>:</h2>
-               <h2 id="seconds_ok">00</h2>
+               <h2 id="seconds_ok"></h2>
             </div>
-
+         <!-- /Relogio -->
             <div>
                <h3 id='title_sessao'></h3>
             </div>
         </div>
 
       </div>
+      <!-- /Timer -->
+
+      <!-- Finalização -->
+      <div id="fim" style="display: none;">
+         <h1>Ciclo finalizado!</h1>
+         <div >
+            <div>
+               <a href="timer.html">Inicio</a>
+            </div>
+         </div>
+      </div>
+      <!-- /Finalização -->
+
+
+   </div>
+   <!-- /Container -->
+
+
+
+   <script src="timer.js"></script>
 </body>
+
 </html>

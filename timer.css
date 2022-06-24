@@ -1,26 +1,33 @@
 @charset "UTF-8";
-
-body{
-    background-color: rgb(73, 72, 72);
-}
-h1{
+ body{
+    background-color: grey;
+ }
+header{
     background-color:#BA2859;
     font-size: 20pt;
     height: 100px;
     text-align: center;
     margin: auto;
 }
-#home{
-    background-color: white;
-    min-height: 300px;
-    width: 700px;
-    border-radius: 20px;
-    box-shadow: 3px 3px 3px rgb(56, 56, 56);
-    text-align: center;
-    margin: 10px auto;
-    padding: 10px;
+#titulo{
+    text-decoration: none;
+    color: white;
 }
-#timer{
+ input{
+    width: 150px;
+    height: 50px;
+    font-size: 30pt;
+    text-align: center;
+ }
+ input[type="number"]::-webkit-outer-spin-button,  /* tirar as setas input tipo number */
+ input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+ }
+ input[type="number"] {
+    -moz-appearance: none;
+ }
+ #opcoes{
     background-color: white;
     min-height: 300px;
     width: 700px;
@@ -29,22 +36,32 @@ h1{
     text-align: center;
     margin: 10px auto;
     padding: 10px;
-  }
-input{
-    height: 30px;
+ }
+ #btn-Acao, #btn-pausa, #btn-sessao{
+    padding: 5px;
+ }
+ #iniciar{
     font-size: 20pt;
-}
-input[type=number]::-webkit-inner-spin-button { /*tira setas no Google Chrome*/
-    -webkit-appearance: none; 
-}
-input[type=number] { /*tira setas no Mozila*/
-   -moz-appearance: textfield;
-   appearance: textfield;
-
-}
-#tnum, #tinter, #tsec{
-    border: 0;
-    box-shadow: 3px 3px 3px 3px grey;
-    border-radius: 5px;
-    margin: 10px;
-}
+    box-shadow: 3px 3px 3px black;
+ }
+ label{
+    font-size: 20pt;
+    font: normal bold;
+ } 
+ h2{
+    font-size: 90pt;
+   display:inline !important;
+ }
+ #ciclo{
+    background-color: white;
+    min-height: 300px;
+    width: 700px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgb(56, 56, 56);
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+ }
+ #tempo{
+    display: inline;
+ }
